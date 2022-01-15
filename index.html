@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Star Base</title>
+    <title>Instructions</title>
 
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
@@ -9,216 +9,29 @@
   <body>
     <a-scene antialias="true" vr-mode-ui="enabled: false">
       <a-assets>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/space_shuttle.glb?v=1642007844599"
-          id="shuttle"
-        ></a-asset-item>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/space_shuttle_atlantis.glb?v=1642178981557"
-          id="shuttle_atlantis"
-        ></a-asset-item>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/factory.glb?v=1642205670160"
-          id="factory"
-        ></a-asset-item>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/warehouse.glb?v=1642206567566"
-          id="warehouse"
-        ></a-asset-item>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/sci-fi_panels.glb?v=1642119458064"
-          id="shuttle_control_panel"
-        ></a-asset-item>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/solar_panles.glb?v=1642208306450"
-          id="solar_panels"
-        ></a-asset-item>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/aerodrome.glb?v=1642120702654"
-          id="aerodrome"
-        ></a-asset-item>
-        <a-asset-item
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/atomic_cooling_tower.glb?v=1642246685373"
-          id="atomic_cooling_tower"
-        ></a-asset-item>
         <audio
-          id="base"
+          id="jarvis"
           autoplay
           loop="true"
-          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/LisaBase.mp3?v=1642270400131"
+          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/Jarvis.mp3?v=1642272018753"
         ></audio>
       </a-assets>
-      <a-entity environment="preset: contact; fog: 0; ground: flat"></a-entity>
+      <a-entity environment="preset: forest" sound="src: #jarvis"></a-entity>
 
-      <a-entity
-        id="space_shuttle_atlantis"
-        gltf-model="#shuttle_atlantis"
-        scale="3 3 3"
-        position=" -35.900 12.70 -68.050"
-        rotation="-90 180 0"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle"
-        gltf-model="#shuttle"
-        scale="0.250 0.250 0.250"
-        position=" -41.5 0.5 6.5"
-        rotation="0 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle1"
-        gltf-model="#shuttle"
-        scale="0.250 0.250 0.250"
-        position=" -41.5 0.5 -5.375"
-        rotation="0 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle2"
-        gltf-model="#shuttle"
-        scale="0.250 0.250 0.250"
-        position=" -41.5 0.5 -16.72"
-        rotation="0 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle3"
-        gltf-model="#shuttle"
-        scale="0.250 0.250 0.250"
-        position=" -41.5 0.5 -27.65"
-        rotation="0 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle4"
-        gltf-model="#shuttle"
-        scale="0.25 0.25 0.25"
-        position="-63.22779 0.5 52.5016"
-        rotation="0 180 0"
-        animation__1="property: position; from:-63.22779 0.5 52.5016; to: -63.22779 40 -200; dur: 25000; easing: linear; loop: true"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle_control_panel"
-        gltf-model="#shuttle_control_panel"
-        scale="0.01 0.01 0.01"
-        position="-32 0.822 0.749"
-        rotation="0 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle_control_panel1"
-        gltf-model="#shuttle_control_panel"
-        scale="0.01 0.01 0.01"
-        position="-32 0.822 -11.686"
-        rotation="0 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="space_shuttle_control_panel2"
-        gltf-model="#shuttle_control_panel"
-        scale="0.01 0.01 0.01"
-        position="-32 0.822 -22.677"
-        rotation="0 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="solar_panel_1"
-        gltf-model="#solar_panels"
-        scale="0.003 0.003 0.003"
-        position="-18.273 0 54.03685"
-        rotation="0 135.35 0"
-      >
-      </a-entity>
-      <a-entity
-        id="solar_panel_2"
-        gltf-model="#solar_panels"
-        scale="0.003 0.003 0.003"
-        position="16 0 54.03685"
-        rotation="0 135.35 0"
-      >
-      </a-entity>
-      <a-entity
-        id="solar_panel_3"
-        gltf-model="#solar_panels"
-        scale="0.003 0.003 0.003"
-        position="-18.273 0 86.080"
-        rotation="0 135.35 0"
-      >
-      </a-entity>
-      <a-entity
-        id="solar_panel_4"
-        gltf-model="#solar_panels"
-        scale="0.003 0.003 0.003"
-        position="16 0 86.080"
-        rotation="0 135.35 0"
-      >
-      </a-entity>
-      <a-entity
-        id="aerodrome_1"
-        gltf-model="#aerodrome"
-        scale="0.35 0.25 0.25"
-        position="-16.35 0.26412 -13.06"
-        rotation="0.46 90 0"
-      >
-      </a-entity>
-      <a-entity
-        id="factory_1"
-        gltf-model="#factory"
-        scale="0.01 0.01 0.01"
-        rotation="0 90 0"
-        position="34.909 0 -31.928"
-      >
-      </a-entity>
-      <a-entity
-        id="warehouse_1"
-        gltf-model="#warehouse"
-        rotation="0 90 0"
-        position="79 -0.89675 5.69357"
-        scale="0.003 0.003 0.003"
-      >
-      </a-entity>
-      <a-entity
-        id="warehouse_2"
-        gltf-model="#warehouse"
-        rotation="0 90 0"
-        position="79 -0.89675 40.068"
-        scale="0.003 0.003 0.003"
-      >
-      </a-entity>
-      <a-entity
-        id="atmoic_tower_1"
-        gltf-model="#atomic_cooling_tower"
-        rotation="0 90 0"
-        position="90 0.033 -89.64"
-        scale="0.005 0.005 0.005"
-      >
-      </a-entity>
-      <a-entity
-        id="atmoic_tower_2"
-        gltf-model="#atomic_cooling_tower"
-        rotation="0 90 0"
-        position="65 0.033 -89.64"
-        scale="0.005 0.005 0.005"
-      >
-      </a-entity>
-      <a-link href="research_facility.html" 
-              title="Research Facility" 
-              position="30.730 1.589 -15.396" 
-              rotation="0 0 0" 
-              id="Research Facility"
-              material="backgroundColor:  #1713dd">
-      </a-link>
-      
-
-
+      <a-link
+        href="star_base.html"
+        title="Star Base"
+        position="-0.13362 2 11.31574"
+        rotation="0 170.6423012504277 0"
+        id="Land of Portals"
+        geometry="primitive: circle;"
+      ></a-link>
       <a-camera
         id="camera"
         look-controls="pointerLockEnabled: true"
-        position="40.98239513898993 1.6 29.28339818208626"
-        rotation="-4.354479242994253 17.647100090029344 0"
-        wasd-controls="acceleration: 28"
+        position="-4.921596674404492 1.6 2.775696290688485"
+        rotation="0 178.99201519886947 0"
+        wasd-controls="acceleration:40"
       >
         <a-cursor></a-cursor>
       </a-camera>
