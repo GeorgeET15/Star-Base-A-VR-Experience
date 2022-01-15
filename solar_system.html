@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Solar System Viewing Station</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene antialias="true" vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-asset-item
+          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/solar_system.glb?v=1642253340116"
+          id="solar_system"
+        ></a-asset-item>
+      </a-assets>
+      <a-sky color="black"></a-sky>
+      <a-entity
+        id="solar_system1"
+        gltf-model="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/solar_system.glb?v=1642253340116"
+        scale="8 8 8"
+        position="0 0 0"
+        rotation="0 180 0"
+        animation__1="property: rotation; from:0 0 0; to: 0 180 0; dur: 25000; easing: linear; loop: true"        
+      >
+      </a-entity>
+
+      <a-camera id="camera" 
+                look-controls="pointerLockEnabled: true" 
+                position="34.7591691014958 45.87345 72.43930157776067" 
+                rotation="-38.15898915571285 19.595156593474126 0" 
+                wasd-controls="enabled: false">
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>

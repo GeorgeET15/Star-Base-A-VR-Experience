@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Research Facility</title>
+
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene antialias="true" vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-asset-item
+          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/wall_computer_big.glb?v=1642265065202"
+          id="big_wall_computer"
+        ></a-asset-item>
+        <a-asset-item
+          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/sci-fi_factory_computer.glb?v=1642264664087"
+          id="computer_desk"
+        ></a-asset-item>
+        <audio
+          id="rfaci"
+          autoplay
+          loop="true"
+          src="https://cdn.glitch.global/d83f9b0e-4de6-4a9e-9cdf-40be5be9e183/LisaR.mp3?v=1642270400320"
+        ></audio>
+      </a-assets>
+      <a-entity environment="preset: default; groundTexture: squares; fog: 0"></a-entity>
+      
+      <a-box
+        id="tSide"
+        position="0 9.7 0"
+        scale="30.06728 -0.25267 100"
+      ><a-entity light="type: hemisphere; color: #017C96; groundColor: #FFFFFF; intensity: 2"></a-entity></a-box>
+      <a-box
+        id="rSide"
+        position="-14.87084 4.897 0"
+        scale="-0.45799 9.82987 99.797"
+        material="color: #072B42"
+      >
+      </a-box>
+
+      <a-box
+        id="fSide"
+        position="-0.06345 4.889 31.01491"
+        scale="30.03707 9.722 1"
+        material="color: #052336"
+      ></a-box>
+      <a-box
+        id="bSide"
+        position="0 4.889 -6.894"
+        rotation=""
+        scale="30.05612 9.722 1"
+        material="color: #061E2E"
+      >
+      </a-box>
+      <a-box
+        id="lSide"
+        position="14.84968 4.897 0"
+        scale="0.28566 9.82987 99.797"
+        material="color: #072233"
+      >
+      </a-box>
+      
+      <a-entity id="scomputer_desk_1"
+                gltf-model="#computer_desk"
+                scale="0.03 0.03 0.03" 
+                position="-9.35569 3.68149 -4.626" 
+                rotation="0 0 0">
+      </a-entity>
+      <a-entity id="scomputer_desk_2"
+                gltf-model="#computer_desk"
+                scale="0.03 0.03 0.03" 
+                position="0.037 3.68149 -4.626" 
+                rotation="0 0 0">
+      </a-entity>
+      <a-entity id="scomputer_desk_3"
+                gltf-model="#computer_desk"
+                scale="0.03 0.03 0.03" 
+                position="8.994 3.68149 -4.626" 
+                rotation="0 0 0">
+      </a-entity>
+      <a-entity id="big_wall_computer_1" 
+                gltf-model="#big_wall_computer" 
+                scale="0.5 0.5 0.5" 
+                position="69.930 2.551 12.790" rotation="">
+      </a-entity>
+      <a-link href="mars.html" 
+              title="Mars" 
+              position="-14.4905 3.82424 9.328" 
+              rotation="0 90 0" 
+              id="Research Facility" 
+              material="shader: portal; side: double" 
+              geometry="primitive: circle; segments: 64"
+              scale="3 3 3">
+      </a-link>
+      <a-link href="solar_system.html" 
+              title="Solar System" 
+              position="14.668 3.824 9.328" 
+              rotation="0 90 0" 
+              id="Solar System" 
+              material="shader: portal; side: double" 
+              geometry="primitive: circle; segments: 64"
+              scale="3 3 3">
+      </a-link>
+      
+
+      
+    
+
+      <a-camera
+        id="camera"
+        look-controls="pointerLockEnabled: true"
+        position="0 3.977 0"
+        rotation="0 178.99201519886947 0"
+        wasd-controls="acceleration:40"
+      >
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
